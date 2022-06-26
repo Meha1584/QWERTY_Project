@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="b86bd1b7db344cf6b91dca26bca523be" Name="Diagram1">
+        <EntityTypeShape EntityType="var1Model.Client" Width="1.5" PointX="3" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Device" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.DevicePart" Width="1.5" PointX="7.5" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.FirstDiagnostic" Width="1.5" PointX="7.5" PointY="4.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.PartsToRepair" Width="1.5" PointX="9.75" PointY="1" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Position" Width="1.5" PointX="0.75" PointY="4.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Repair" Width="1.5" PointX="7.5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Specifications" Width="1.5" PointX="7.5" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.SpecificationsOfPart" Width="1.5" PointX="9.75" PointY="7" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Status" Width="1.5" PointX="5.25" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.sysdiagrams" Width="1.5" PointX="0.75" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Type" Width="1.5" PointX="3" PointY="7.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="var1Model.Worker" Width="1.5" PointX="3" PointY="3.875" IsExpanded="true" />
+        <AssociationConnector Association="var1Model.FK_Device_Client" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_Device_Type" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_Device_Worker" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_FirstDiagnostic_Device" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_Repair_Device" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_PartsToRepair_DevicePart" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_SpecificationsOfPart_DevicePart" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_PartsToRepair_Repair" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_Worker_Position" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_Repair_Status" ManuallyRouted="false" />
+        <AssociationConnector Association="var1Model.FK_SpecificationsOfPart_Specifications" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

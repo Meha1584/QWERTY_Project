@@ -1,0 +1,47 @@
+﻿<Page x:Class="QWERTY_Project.PageList.EquipmentPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QWERTY_Project.PageList"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="EquipmentPage">
+
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="70"/>
+            <RowDefinition Height="120"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Bottom">
+            <Label Content="Оборудование" FontSize="40"/>
+        </StackPanel>
+        <Grid Grid.Row="1" VerticalAlignment="Center">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <StackPanel HorizontalAlignment="Left">
+                <Label Content="Введите Модель"/>
+                <TextBox Name="inputModel" Width="300" TextChanged="FindModel"/>
+            </StackPanel>
+            <StackPanel HorizontalAlignment="Left" Grid.Column="1">
+                <Label Content="Выберите тип"/>
+                <ComboBox Name="checktip" Width="300" SelectionChanged="FilterTip"/>
+            </StackPanel>
+        </Grid>
+        <WrapPanel Grid.Row="2" Orientation="Vertical">
+            <DataGrid Name="listOborudovanie" AutoGenerateColumns="False" HorizontalScrollBarVisibility="Disabled" VerticalScrollBarVisibility="Auto">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="ид" Width="*" Binding="{Binding id}"/>
+                    <DataGridTextColumn Header="Название" Width="*" Binding="{Binding title}"/>
+                    <DataGridTextColumn Header="Количество" Width="*" Binding="{Binding count}"/>
+                    <DataGridTextColumn Header="Цена" Width="*" Binding="{Binding cost}"/>
+                    <DataGridTextColumn Header="Значение" Width="*" Binding="{Binding value}"/>
+                    <DataGridTextColumn Header="Тип" Width="*" Binding="{Binding Title}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+        </WrapPanel>
+    </Grid>
+</Page>
