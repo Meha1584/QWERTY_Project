@@ -23,7 +23,6 @@ namespace QWERTY_Project
         public int Num { get; set; }
         public string name { get; set; }
         public string serialPass { get; set; }
-        public int numberPas { get; set; }
         public decimal phone { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

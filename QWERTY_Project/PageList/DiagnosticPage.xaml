@@ -1,0 +1,29 @@
+﻿<Page x:Class="QWERTY_Project.PageList.DiagnosticPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QWERTY_Project.PageList"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="DiagnosticPage">
+    <Grid>
+        <Label Name="nameCheck" Visibility="Hidden" Content="нет заказов" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+        <Grid Name="grid">
+            <Grid.RowDefinitions>
+                <RowDefinition/>
+                <RowDefinition/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Label Name="nameEq" FontSize="30" VerticalAlignment="Center" HorizontalAlignment="Center"/>
+            <StackPanel Grid.Row="1" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Label Content="Введите отчет по диагностике"/>
+                <TextBox Name="inputDiagn"/>
+            </StackPanel>
+            <StackPanel Grid.Row="2" VerticalAlignment="Center" HorizontalAlignment="Center">
+                <Button Content="На ремонт" Margin="10" Click="GoRepair" Height="30"/>
+                <Button Content="Отдать клиенту" Margin="10" Click="ReturnDeviceForClient" Height="30"/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Page>

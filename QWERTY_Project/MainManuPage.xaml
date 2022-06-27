@@ -5,7 +5,8 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QWERTY_Project"
         mc:Ignorable="d"
-        Title="MainManuPage" Height="450" Width="800">
+        Title="ИС QWERTY" Height="694.5" Width="800" Icon="/Resource/Logo.ico">
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="200"/>
@@ -18,13 +19,13 @@
             </Grid.RowDefinitions>
             <Image Source="/Resource/Logo.png" />
             <StackPanel Margin="10" Grid.Row="1" Width="120">
-                <Button Content="Мастера" Height="30" Margin="10" Click="GoMaster"/>
-                <Button Content="Клиенты" Height="30" Margin="10" Click="GoClient"/>
-                <Button Content="Оборудование" Height="30" Margin="10" Click="GoOborud"/>
-                <Button Content="Заказы" Height="30" Margin="10" Click="GoZakaz"/>
+                <Button Content="Мастера" Height="30" Margin="10" Click="GoMaster" Name="visibleM"/>
+                <Button Content="Клиенты" Height="30" Margin="10" Click="GoClient" Name="visibleC"/>
+                <Button Content="Запчасти" Height="30" Margin="10" Click="GoOborud" />
+                <Button Content="Заказы" Height="30" Margin="10" Click="GoZakaz" Name="visibleZ"/>
                 <Button Content="Каталог" Height="30" Margin="10" Click="GoKatalog"/>
-                <Button Content="Заказы" Height="30" Margin="10" Click="GoDevice"/>
-                <Button Content="Заявка" Height="30" Margin="10" Click="GoOrder"/>
+                <Button Content="Заявка" Height="30" Margin="10" Click="GoOrder" Name="visibleOrder"/>
+                <Button Content="Диагностика" Height="30" Margin="10" Click="GoDiagnostic"/>
             </StackPanel>
         </Grid>
         <Frame Name="frame" NavigationUIVisibility="Hidden" Grid.Column="1">

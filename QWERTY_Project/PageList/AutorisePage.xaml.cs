@@ -28,15 +28,7 @@ namespace QWERTY_Project
             InitializeComponent();
             this.entities = _context;
             this.Window2 = mainWindow;
-            Start();
-        }
-        public void Start()
-        {
-            foreach (var item in entities.DevicePart.ToList())
-            {
-                item.image = File.ReadAllBytes($@"C:\Users\Fillaa\Downloads\i\{item.id}.jpg");
-            }
-            entities.SaveChanges();
+            
         }
         int count = 0;
         private void CheckEmployeer(object sender, RoutedEventArgs e)

@@ -9,17 +9,16 @@
           <Key>
             <PropertyRef Name="Num" />
           </Key>
-          <Property Name="Num" Type="int" Nullable="false" />
+          <Property Name="Num" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="serialPass" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="numberPas" Type="int" Nullable="false" />
           <Property Name="phone" Type="decimal" Precision="18" Scale="0" Nullable="false" />
         </EntityType>
         <EntityType Name="Device">
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="type" Type="int" Nullable="false" />
           <Property Name="model" Type="nvarchar" MaxLength="50" Nullable="false" />
           <Property Name="damage" Type="nvarchar" MaxLength="50" Nullable="false" />
@@ -41,7 +40,7 @@
           <Key>
             <PropertyRef Name="idDiagnostic" />
           </Key>
-          <Property Name="idDiagnostic" Type="int" Nullable="false" />
+          <Property Name="idDiagnostic" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="device" Type="int" Nullable="false" />
           <Property Name="description" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
@@ -65,7 +64,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="int" Nullable="false" />
+          <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="device" Type="int" Nullable="false" />
           <Property Name="comment" Type="nvarchar(max)" Nullable="false" />
           <Property Name="status" Type="int" Nullable="false" />
@@ -321,10 +320,9 @@
           <Key>
             <PropertyRef Name="Num" />
           </Key>
-          <Property Name="Num" Type="Int32" Nullable="false" />
+          <Property Name="Num" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="name" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="serialPass" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="numberPas" Type="Int32" Nullable="false" />
           <Property Name="phone" Type="Decimal" Precision="18" Scale="0" Nullable="false" />
           <NavigationProperty Name="Device" Relationship="Self.FK_Device_Client" FromRole="Client" ToRole="Device" />
         </EntityType>
@@ -332,7 +330,7 @@
           <Key>
             <PropertyRef Name="id" />
           </Key>
-          <Property Name="id" Type="Int32" Nullable="false" />
+          <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="type" Type="Int32" Nullable="false" />
           <Property Name="model" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="damage" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
@@ -353,9 +351,9 @@
           <Property Name="title" Type="String" MaxLength="90" FixedLength="false" Unicode="true" Nullable="false" />
           <Property Name="count" Type="Int32" Nullable="false" />
           <Property Name="cost" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
           <NavigationProperty Name="PartsToRepair" Relationship="Self.FK_PartsToRepair_DevicePart" FromRole="DevicePart" ToRole="PartsToRepair" />
           <NavigationProperty Name="SpecificationsOfPart" Relationship="Self.FK_SpecificationsOfPart_DevicePart" FromRole="DevicePart" ToRole="SpecificationsOfPart" />
-          <Property Name="image" Type="Binary" MaxLength="Max" FixedLength="false" />
         </EntityType>
         <EntityType Name="FirstDiagnostic">
           <Key>
@@ -452,9 +450,9 @@
           <Property Name="position" Type="Int32" Nullable="false" />
           <Property Name="oklad" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="percentToRepair" Type="Decimal" Precision="5" Scale="4" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="Device" Relationship="Self.FK_Device_Worker" FromRole="Worker" ToRole="Device" />
           <NavigationProperty Name="Position1" Relationship="Self.FK_Worker_Position" FromRole="Worker" ToRole="Position" />
-          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
         </EntityType>
         <Association Name="FK_Device_Client">
           <End Role="Client" Type="Self.Client" Multiplicity="1" />
@@ -659,7 +657,6 @@
                 <ScalarProperty Name="Num" ColumnName="Num" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="serialPass" ColumnName="serialPass" />
-                <ScalarProperty Name="numberPas" ColumnName="numberPas" />
                 <ScalarProperty Name="phone" ColumnName="phone" />
               </MappingFragment>
             </EntityTypeMapping>
@@ -680,11 +677,11 @@
           <EntitySetMapping Name="DevicePart">
             <EntityTypeMapping TypeName="var1Model.DevicePart">
               <MappingFragment StoreEntitySet="DevicePart">
-                <ScalarProperty Name="image" ColumnName="image" />
                 <ScalarProperty Name="id" ColumnName="id" />
                 <ScalarProperty Name="title" ColumnName="title" />
                 <ScalarProperty Name="count" ColumnName="count" />
                 <ScalarProperty Name="cost" ColumnName="cost" />
+                <ScalarProperty Name="image" ColumnName="image" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
@@ -772,12 +769,12 @@
           <EntitySetMapping Name="Worker">
             <EntityTypeMapping TypeName="var1Model.Worker">
               <MappingFragment StoreEntitySet="Worker">
-                <ScalarProperty Name="password" ColumnName="password" />
                 <ScalarProperty Name="tabNum" ColumnName="tabNum" />
                 <ScalarProperty Name="FIO" ColumnName="FIO" />
                 <ScalarProperty Name="position" ColumnName="position" />
                 <ScalarProperty Name="oklad" ColumnName="oklad" />
                 <ScalarProperty Name="percentToRepair" ColumnName="percentToRepair" />
+                <ScalarProperty Name="password" ColumnName="password" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

@@ -26,8 +26,16 @@ namespace QWERTY_Project
             InitializeComponent();
             this.worker = worker;
             entities = new var1Entities();
-            frame.NavigationService.Navigate(new MasterPage(entities));
+            frame.NavigationService.Navigate(new PageList.KatalogPage(entities));
             this.WindowState = WindowState.Maximized;
+            //если мастер, то скрыть некоторый функционал
+            if (worker.Position1.title.Equals("Мастер"))
+            {
+                visibleM.Visibility = Visibility.Hidden;
+                visibleC.Visibility = Visibility.Hidden;
+                visibleZ.Visibility = Visibility.Hidden;
+                visibleOrder.Visibility = Visibility.Hidden;
+            }
         }
 
         private void GoMaster(object sender, RoutedEventArgs e)
@@ -42,7 +50,7 @@ namespace QWERTY_Project
 
         private void GoZakaz(object sender, RoutedEventArgs e)
         {
-
+            frame.Navigate(new CheckDiagnosticPage(entities));
         }
 
         private void GoOborud(object sender, RoutedEventArgs e)
@@ -53,6 +61,16 @@ namespace QWERTY_Project
         private void GoKatalog(object sender, RoutedEventArgs e)
         {
             frame.Navigate(new PageList.KatalogPage(entities));
+        }
+
+        private void GoOrder(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new PageList.CreateOrderPage(entities));
+        }
+
+        private void GoDiagnostic(object sender, RoutedEventArgs e)
+        {
+            frame.Navigate(new PageList.DiagnosticPage(entities, worker));
         }
     }
 }

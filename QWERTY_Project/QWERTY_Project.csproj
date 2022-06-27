@@ -64,24 +64,8 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Compile Include="Equipment.cs" />
-    <Compile Include="PageList\AddMasterPage.xaml.cs">
-      <DependentUpon>AddMasterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageList\AutorisePage.xaml.cs">
-      <DependentUpon>AutorisePage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Client.cs">
       <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="PageList\checkEqipPage.xaml.cs">
-      <DependentUpon>checkEqipPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageList\ClientPage.xaml.cs">
-      <DependentUpon>ClientPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="PageList\CluePasswordPage.xaml.cs">
-      <DependentUpon>CluePasswordPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="Device.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -92,8 +76,61 @@
     <Compile Include="FirstDiagnostic.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Model1.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Model1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Model1.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CheckClientPage.xaml.cs">
+      <DependentUpon>CheckClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DeviceCheck.cs" />
+    <Compile Include="PageList\CheckDiagnosticPage.xaml.cs">
+      <DependentUpon>CheckDiagnosticPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Equipment.cs" />
+    <Compile Include="PageList\AddMasterPage.xaml.cs">
+      <DependentUpon>AddMasterPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\AutorisePage.xaml.cs">
+      <DependentUpon>AutorisePage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\checkEqipPage.xaml.cs">
+      <DependentUpon>checkEqipPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\ClientPage.xaml.cs">
+      <DependentUpon>ClientPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CluePasswordPage.xaml.cs">
+      <DependentUpon>CluePasswordPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="MainManuPage.xaml.cs">
       <DependentUpon>MainManuPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CreateCllient.xaml.cs">
+      <DependentUpon>CreateCllient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CreateOrderPage.xaml.cs">
+      <DependentUpon>CreateOrderPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CreateOrderPageWithClient.xaml.cs">
+      <DependentUpon>CreateOrderPageWithClient.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\CreateRepairPage.xaml.cs">
+      <DependentUpon>CreateRepairPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageList\DiagnosticPage.xaml.cs">
+      <DependentUpon>DiagnosticPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageList\EquipmentPage.xaml.cs">
       <DependentUpon>EquipmentPage.xaml</DependentUpon>
@@ -103,11 +140,6 @@
     </Compile>
     <Compile Include="PageList\MasterPage.xaml.cs">
       <DependentUpon>MasterPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="PartsToRepair.cs">
       <DependentUpon>Model1.tt</DependentUpon>
@@ -137,6 +169,14 @@
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="WorkerListClass.cs" />
+    <Page Include="PageList\CheckClientPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageList\CheckDiagnosticPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageList\AddMasterPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -173,6 +213,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageList\CreateCllient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageList\CreateOrderPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageList\CreateOrderPageWithClient.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageList\CreateRepairPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageList\DiagnosticPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageList\EquipmentPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -187,16 +247,6 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Model1.Context.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.Context.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Model1.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Model1.edmx</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -251,6 +301,5 @@
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
   </ItemGroup>
-  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

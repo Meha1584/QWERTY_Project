@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:QWERTY_Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800" Icon="/Resource/Logo.ico">
+        Title="Авторизация" Height="450" Width="800" Icon="/Resource/Logo.ico">
     <Grid>
         <Frame Name="frame" NavigationUIVisibility="Hidden">
             

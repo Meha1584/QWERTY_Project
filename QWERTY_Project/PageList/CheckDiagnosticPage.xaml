@@ -1,0 +1,36 @@
+﻿<Page x:Class="QWERTY_Project.CheckDiagnosticPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:QWERTY_Project"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="CheckDiagnosticPage">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="100"/>
+            <RowDefinition/>
+            <RowDefinition Height="2*"/>
+        </Grid.RowDefinitions>
+        <Label Grid.ColumnSpan="2" Content="Заявки" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="35"/>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Left" Margin="10">
+            <Label Content="Выберете тип"/>
+            <ComboBox Name="checkDiagnostic" Width="200" SelectionChanged="chechDiagnosticBox"/>
+        </StackPanel>
+        <DataGrid Grid.Row="2" Grid.ColumnSpan="2" Name="checkDiagnosticGrid" AutoGenerateColumns="False" VerticalScrollBarVisibility="Auto">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Тип" Width="*" Binding="{Binding tip}"/>
+                <DataGridTextColumn Header="Модель" Width="*" Binding="{Binding model}"/>
+                <DataGridTextColumn Header="Повреждения" Width="*" Binding="{Binding damage}"/>
+                <DataGridTextColumn Header="Решение" Width="*" Binding="{Binding compaint}"/>
+                <DataGridTextColumn Header="Мастер" Width="*" Binding="{Binding master}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Page>

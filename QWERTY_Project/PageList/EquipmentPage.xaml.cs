@@ -26,6 +26,7 @@ namespace QWERTY_Project.PageList
         {
             InitializeComponent();
             this.entities = entities;
+            //объединение таблиц
             var listValueOfParts = entities.DevicePart.Join(entities.SpecificationsOfPart,
                 x => x.id,
                 y => y.idPart,

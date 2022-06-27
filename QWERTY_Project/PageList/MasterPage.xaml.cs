@@ -31,6 +31,7 @@ namespace QWERTY_Project
             workerListClasses = new List<WorkerListClass>();
             foreach (var item in listMasterEntiti)
             {
+                // выполняем соеденение сотрудников с статусом заказа
                 var status = entities.Repair.ToList().Where(x => x.Device1.master == item.tabNum && x.Status1.Title.Equals("в ремонте")).ToList();
                 if (status.Count != 0)
                 {
@@ -42,6 +43,7 @@ namespace QWERTY_Project
                 }
                 listWorker.ItemsSource = workerListClasses.ToList();
             }
+            //Добавляем элементы в Combobox/
             checkStatus.Items.Add("Все");
             checkStatus.Items.Add("Работает");
             checkStatus.Items.Add("Свободен");
